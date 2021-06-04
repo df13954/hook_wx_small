@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.xposedxdebug"
+        minSdkVersion 14
+        targetSdkVersion 27
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:23.4.0'
+    compileOnly 'de.robv.android.xposed:api:82'
+
+}
